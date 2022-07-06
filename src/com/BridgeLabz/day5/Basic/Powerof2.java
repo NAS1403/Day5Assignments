@@ -1,20 +1,21 @@
 package com.BridgeLabz.day5.Basic;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Powerof2 {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-        System.out.println("Enter the value of N");
-        int N = scn.nextInt();
-        //System.out.println(N);
-        if (N>=0 && N<31){
-            for (int i=1;i<=N;i++){
-                System.out.println("2 * " + i +" = " +(2*i));
-            }
+        System.out.println("Enter the value of n");
+        int n = scn.nextInt();
+        if (n==0){
+            System.out.println("2 power 0 is 1");
         }
         else{
-            System.out.println("Overflow");
+            for (int i=1;i<=n;i++){
+                int result = (int)Math.pow(2,i);
+                System.out.println("2 power "+ i + " is :"+ result);
+            }
         }
 
         }
